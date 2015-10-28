@@ -1,0 +1,25 @@
+{
+  "version": "0.0.1",
+  "name": "my-media-manager",
+  "launch_path": "/index.html",
+  "description": "My Media Manager",
+  "icons": {
+    "128": "/images/touch/icon-128x128.png"
+  },
+  "developer": {
+    "name": "dSebastien",
+    "url": "https://twitter.com/dsebastien"
+  },
+  "installs_allowed_from": [
+    "*"
+  ],
+  "default_locale": "en",
+  "permissions": {
+  },
+  "locales": {
+    "en": {
+      "name": "my-media-manager",
+      "description": "My Media Manager"
+    }
+  }
+}
