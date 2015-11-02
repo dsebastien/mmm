@@ -1,6 +1,7 @@
 "use strict";
 
 // import Angular2 deps
+import "zone.js";
 import "reflect-metadata";
 
 // import Angular 2
@@ -16,7 +17,8 @@ import {RouteConfig, Route, RouterOutlet, RouterLink, Router, LocationStrategy, 
 import {Home} from "../pages/home/home";
 
 // app services
-//import {appServicesInjectables} from "core/services/services";
+import {FirebaseDataService} from "./services/data/firebaseDataService";
+import {FirebaseAuthenticationService} from "./security/authentication/firebaseAuthenticationService";
 
 @Component({
 	selector: "app",
@@ -24,10 +26,8 @@ import {Home} from "../pages/home/home";
 	directives: [CORE_DIRECTIVES, RouterOutlet, RouterLink]
 })
 @RouteConfig([
-	<Route>{path: "/", component: Home, as: "Home", data: undefined, loader: undefined, redirectTo: undefined} // the as serves as alias for links, etc
-	/*
-	new Route({path: "/Home", component: Home, as: "Home", data: undefined, loader: undefined, redirectTo: undefined}) // the as serves as alias for links, etc
-	*/
+	{path: "/", component: Home, as: "Home", data: undefined} // the as serves as alias for links, etc
+	//new Route({path: "/Home", component: Home, as: "Home", data: undefined}) // the as serves as alias for links, etc
 ])
 class App {
 	constructor() {
@@ -40,10 +40,12 @@ console.log("Bootstrapping the App");
 
 // in [] is the list of injector bindings. Those bindings are used when an injector is created. Passing these here make the bindings available application-wide
 bootstrap(App, [
-	//appServicesInjectables, // alternative way of filling the injector with all the classes we want to be able to inject
 	ROUTER_PROVIDERS,
 	HTTP_PROVIDERS,
-	bind(LocationStrategy).toClass(PathLocationStrategy) // enables the following: /#/<component_name> rather than /<component_name>
+	bind(LocationStrategy).toClass(PathLocationStrategy), // enables the following: /#/<component_name> rather than /<component_name>
+	FirebaseDataService,
+	FirebaseAuthenticationService
+
 	//todo replace with
 	//bind(LocationStrategy).toClass(HTML5LocationStrategy) // enable HTML5 history API location strategy
 

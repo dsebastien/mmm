@@ -1,0 +1,7 @@
+<nav>
+	<ul>
+		<li [class.u-hidden]="authenticationService.isUserAuthenticated()"><a (click)="authenticationService.authenticateWithGoogle()">Login</a></li>
+		<li [class.u-hidden]="!authenticationService.isUserAuthenticated()">{{authenticationService.userInfo.name}} <img class="userPic" src="{{authenticationService.userInfo.picture}}"></li>
+	</ul>
+</nav>
+<button (click)="authenticationService.displayStatus()">Display Status</button>
