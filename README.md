@@ -1,11 +1,9 @@
 # My Media Manager (mmm)
 
 ## About
-My Media Manager (mmm for friends) is a media collection management tool.
+My Media Manager (mmm for friends) is a media library management tool.
 
-The goal of mmm is to help you catalog all your media in one central place.
-
-This project was created using the [ModernWebDev Yeoman Generator](https://github.com/dsebastien/modernWebDevGenerator) by [dSebastien](https://twitter.com/dSebastien).
+The goal of mmm is to help you catalog all your media in one central place and make it accessible, shareable, ...
 
 ## How to build
 First, make sure that you have installed the required global npm packages: `npm install gulp babel babel-core --global --no-optional`.
