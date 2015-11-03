@@ -1,7 +1,7 @@
+<h1>NavBar</h1>
 <nav>
 	<ul>
-		<li [class.u-hidden]="authenticationService.isUserAuthenticated()"><a (click)="authenticationService.authenticateWithGoogle()">Login</a></li>
-		<li [class.u-hidden]="!authenticationService.isUserAuthenticated()">{{authenticationService.userInfo.name}} <img class="userPic" src="{{authenticationService.userInfo.picture}}"></li>
+		<li>Nav 1</li>
+		<li>Nav 2</li>
 	</ul>
 </nav>
-<button (click)="authenticationService.displayStatus()">Display Status</button>

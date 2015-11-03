@@ -14,24 +14,45 @@ import {RouteConfig, Route, RouterOutlet, RouterLink, Router, LocationStrategy, 
 // todo add HTML5LocationStrategy (whatever the new name) & remove path location strategy
 
 // app components
+import {NavBar} from "../components/nav-bar/navBar";
+import {UserBar} from "../components/user-bar/userBar";
 import {Home} from "../pages/home/home";
 
 // app services
 import {FirebaseDataService} from "./services/data/firebaseDataService";
 import {FirebaseAuthenticationService} from "./security/authentication/firebaseAuthenticationService";
+import {FirebaseAuthenticationProviders} from "./security/authentication/firebaseAuthenticationProviders";
+
 
 @Component({
-	selector: "app",
+	selector: "my-media-manager",
 	templateUrl: "core/core.bootstrap.template.html", //template: "<router-outlet></router-outlet>",
-	directives: [CORE_DIRECTIVES, RouterOutlet, RouterLink]
+	directives: [CORE_DIRECTIVES, RouterOutlet, RouterLink, NavBar, UserBar]
 })
 @RouteConfig([
 	{path: "/", component: Home, as: "Home", data: undefined} // the as serves as alias for links, etc
 	//new Route({path: "/Home", component: Home, as: "Home", data: undefined}) // the as serves as alias for links, etc
 ])
-class App {
-	constructor() {
-		console.log("Application bootstrapped!");
+class MyMediaManager {
+	private _authenticationService:FirebaseAuthenticationService;
+
+	constructor(authenticationService:FirebaseAuthenticationService) {
+		console.log("MyMediaManager loaded");
+		this._authenticationService = authenticationService;
+	}
+
+	get authenticationService():FirebaseAuthenticationService {
+		return this._authenticationService;
+	}
+
+	logonWithGoogle() {
+		console.log("Handling logon with Google event");
+		this._authenticationService.logonWith(FirebaseAuthenticationProviders.google);
+	}
+	
+	logout(){
+		console.log("Handling logout event");
+		this._authenticationService.logout();
 	}
 }
 
@@ -39,7 +60,7 @@ class App {
 console.log("Bootstrapping the App");
 
 // in [] is the list of injector bindings. Those bindings are used when an injector is created. Passing these here make the bindings available application-wide
-bootstrap(App, [
+bootstrap(MyMediaManager, [
 	ROUTER_PROVIDERS,
 	HTTP_PROVIDERS,
 	bind(LocationStrategy).toClass(PathLocationStrategy), // enables the following: /#/<component_name> rather than /<component_name>
