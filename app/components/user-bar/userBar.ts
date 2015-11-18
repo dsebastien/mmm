@@ -12,8 +12,8 @@ import {UserInfo} from "../../core/security/authentication/userInfo";
 export class UserBar {
 	@Input() userInfo:UserInfo;
 	@Input() userIsAuthenticated:boolean;
-	@Output() logonWithGoogleEvent:EventEmitter = new EventEmitter();
-	@Output() logoutEvent:EventEmitter = new EventEmitter();
+	@Output() logonWithGoogleEvent:EventEmitter<void> = new EventEmitter<void>();
+	@Output() logoutEvent:EventEmitter<void> = new EventEmitter<void>();
 
 	constructor() {
 		console.log("UserBar component loaded");
@@ -30,7 +30,7 @@ export class UserBar {
 	/**
 	 * Generate a logout event.
 	 */
-	logout(){
+	logout() {
 		console.log("Event: logout");
 		this.logoutEvent.next(null);
 	}

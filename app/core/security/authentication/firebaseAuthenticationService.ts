@@ -45,7 +45,7 @@ export class FirebaseAuthenticationService {
 	 * Handler that is invoked right after authentication (successful or not)
 	 * @param error
 	 * @param authData
-     */
+	 */
 	authenticationHandler(error, authData) {
 		if (error) {
 			console.log("Authentication failed or user didn't give consent!", error); // todo improve error handling
@@ -80,8 +80,8 @@ export class FirebaseAuthenticationService {
 	/**
 	 * Logout
 	 */
-	logout(){
-		if(this._userIsAuthenticated){
+	logout() {
+		if (this._userIsAuthenticated) {
 			console.log("Logging the user out");
 			const firebaseConnection:Firebase = this._dataService.firebaseConnection;
 			firebaseConnection.unauth();

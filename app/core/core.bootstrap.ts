@@ -49,8 +49,8 @@ class MyMediaManager {
 		console.log("Handling logon with Google event");
 		this._authenticationService.logonWith(FirebaseAuthenticationProviders.google);
 	}
-	
-	logout(){
+
+	logout() {
 		console.log("Handling logout event");
 		this._authenticationService.logout();
 	}
