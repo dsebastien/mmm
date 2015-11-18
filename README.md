@@ -1,5 +1,7 @@
 # My Media Manager (mmm)
 
+[![Join the chat at https://gitter.im/dsebastien/mmm](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/dsebastien/mmm?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ## About
 My Media Manager (mmm for friends) is a media library management tool.
 
