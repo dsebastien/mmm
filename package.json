@@ -19,7 +19,7 @@
 	  "@reactivex/rxjs": "npm:@reactivex/rxjs@^5.0.0-alpha.7",
 	  "angular2": "npm:angular2@^2.0.0-alpha.46",
 	  "babel-runtime": "npm:babel-runtim@^6.1.18",
-	  "firebase": "github:firebase/firebase-bower@^2.3.1",
+	  "firebase": "github:firebase/firebase-bower@^2.3.2",
 	  "lodash": "npm:lodash@^3.10.1",
 	  "normalize.css": "github:necolas/normalize.css@^3.0.3",
 	  "reflect-metadata": "npm:reflect-metadata@^0.1.2",
@@ -35,7 +35,8 @@
 	"angular2": "2.0.0-alpha.46",
 	"@reactivex/rxjs": "5.0.0-alpha.7",
 	"reflect-metadata": "0.1.2",
-	"zone.js": "0.5.8"
+	"zone.js": "0.5.8",
+	"firebase": "2.3.x"
   },
   "devDependencies": {
 	"nodemon": "1.8.x",
