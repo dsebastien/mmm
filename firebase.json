@@ -1,0 +1,40 @@
+{
+	"firebase": "mymediamanager",
+	"public": "dist",
+	"ignore": [
+		"jspm_packages",
+		"node_modules",
+		"src",
+		"tools",
+		"**/.*",
+		"firebase.json",
+		"gulpfile.js",
+		"gulpfile.babel.js",
+		"package.json",
+		".tmp/",
+		"lib-cov/",
+		"coverage/",
+		"**/*.log",
+		"**/*.map",
+		"**/*.d.ts",
+		"*.iml",
+		".idea/",
+		".webstorm/",
+		".DS_Store",
+		".AppleDouble",
+		".LSOverride",
+		"Icon",
+		".sublime-gulp.cache"
+	],
+	"rewrites": [{
+		"source": "**",
+		"destination": "/index.html"
+	}],
+	"headers": [{
+		"source" : "**/*.@(js|html|css)",
+		"headers" : [{
+			"key" : "Cache-Control",
+			"value" : "max-age=3600"
+		}]
+	}]
+}
