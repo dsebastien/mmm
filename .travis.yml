@@ -13,7 +13,6 @@ node_js:
   - '4.2'
 before_script:
   - npm prune
-  - npm dedupe
 before_install:
   - npm install --global jspm
   - jspm config registries.github.auth $JSPM_GITHUB_AUTH_TOKEN
