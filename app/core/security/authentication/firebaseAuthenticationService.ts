@@ -46,7 +46,7 @@ export class FirebaseAuthenticationService {
 	 * @param error
 	 * @param authData
 	 */
-	authenticationHandler(error, authData) {
+	authenticationHandler(error:any, authData:any) {
 		if (error) {
 			console.log("Authentication failed or user didn't give consent!", error); // todo improve error handling
 		}
