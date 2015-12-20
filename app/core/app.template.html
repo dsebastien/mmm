@@ -1,0 +1,7 @@
+<nav-bar></nav-bar>
+<hr>
+<user-bar (logonWithGoogleEvent)="logonWithGoogle()" (logoutEvent)="logout()" [userInfo]="authenticationService.userInfo" [userIsAuthenticated]="authenticationService.userIsAuthenticated"></user-bar>
+<hr>
+<router-outlet></router-outlet>
+<hr>
+Footer

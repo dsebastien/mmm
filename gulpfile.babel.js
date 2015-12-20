@@ -6,6 +6,6 @@
 import gulp from "gulp";
 
 import modernWebDevBuild from "modern-web-dev-build";
-let options = undefined; //TODO define options
+let options = {};
 
 modernWebDevBuild.registerTasks(gulp, options);

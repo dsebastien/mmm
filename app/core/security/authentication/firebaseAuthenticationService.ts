@@ -1,10 +1,10 @@
 "use strict";
 
-import { Injectable } from "angular2/angular2";
+import {Injectable} from "angular2/core";
 import * as Firebase from "firebase";
-import { FirebaseDataService } from "../../services/data/firebaseDataService";
+import {FirebaseDataService} from "../../services/data/firebaseDataService";
 import {FirebaseAuthenticationProviders} from "./firebaseAuthenticationProviders";
-import { UserInfo, UserInfoImpl } from "./userInfo";
+import {UserInfo, UserInfoImpl} from "./userInfo";
 
 /**
  * Manages the authentication process.

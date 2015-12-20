@@ -1,17 +1,12 @@
 "use strict";
 
-// import Angular2 deps
-import "zone.js";
-import "reflect-metadata";
-
 // import Angular 2
-import {Component, CORE_DIRECTIVES, provide, bootstrap} from "angular2/angular2";
-import {Http, HTTP_PROVIDERS} from "angular2/http";
+import {Component} from "angular2/core";
+import {Http} from "angular2/http";
 
 // import Angular 2 Component Router
 // reference: http://blog.thoughtram.io/angular/2015/06/16/routing-in-angular-2.html
-import {RouteConfig, Route, RouterOutlet, RouterLink, Router, LocationStrategy, PathLocationStrategy, ROUTER_PROVIDERS} from "angular2/router";
-// todo add HTML5LocationStrategy (whatever the new name) & remove path location strategy
+import {RouteConfig, Route, RouterOutlet, RouterLink, Router} from "angular2/router";
 
 // app components
 import {NavBar} from "../components/nav-bar/navBar";
@@ -26,14 +21,14 @@ import {FirebaseAuthenticationProviders} from "./security/authentication/firebas
 
 @Component({
 	selector: "my-media-manager",
-	templateUrl: "core/core.bootstrap.template.html", //template: "<router-outlet></router-outlet>",
-	directives: [CORE_DIRECTIVES, RouterOutlet, RouterLink, NavBar, UserBar]
+	templateUrl: "core/app.template.html", //template: "<router-outlet></router-outlet>",
+	directives: [RouterOutlet, RouterLink, NavBar, UserBar]
 })
 @RouteConfig([
 	{path: "/", component: Home, as: "Home", data: undefined} // the as serves as alias for links, etc
 	//new Route({path: "/Home", component: Home, as: "Home", data: undefined}) // the as serves as alias for links, etc
 ])
-class MyMediaManager {
+export class MyMediaManager {
 	private _authenticationService:FirebaseAuthenticationService;
 
 	constructor(authenticationService:FirebaseAuthenticationService) {
@@ -55,22 +50,3 @@ class MyMediaManager {
 		this._authenticationService.logout();
 	}
 }
-
-// bootstrap our app
-console.log("Bootstrapping the App");
-
-// in [] is the list of injector bindings. Those bindings are used when an injector is created. Passing these here make the bindings available application-wide
-bootstrap(MyMediaManager, [
-	ROUTER_PROVIDERS,
-	HTTP_PROVIDERS,
-	provide(LocationStrategy, { useClass: PathLocationStrategy }), // enables the following: /#/<component_name> rather than /<component_name>
-	FirebaseDataService,
-	FirebaseAuthenticationService
-
-	//todo replace with
-	//provide(LocationStrategy, { useClass: HTML5LocationStrategy }) // enable HTML5 history API location strategy
-
-]).then(
-	success => console.log("Bootstrap successful"),
-	error => console.error(error)
-);

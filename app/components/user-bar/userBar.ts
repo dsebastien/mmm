@@ -1,7 +1,7 @@
 "use strict";
 
 // Angular 2
-import { Component, Input, Output, EventEmitter } from "angular2/angular2";
+import { Component, Input, Output, EventEmitter } from "angular2/core";
 
 import {UserInfo} from "../../core/security/authentication/userInfo";
 
@@ -24,7 +24,7 @@ export class UserBar {
 	 */
 	logonWithGoogle() {
 		console.log("Event: logon with Google");
-		this.logonWithGoogleEvent.next(null);
+		this.logonWithGoogleEvent.emit(null);
 	}
 
 	/**
@@ -32,6 +32,6 @@ export class UserBar {
 	 */
 	logout() {
 		console.log("Event: logout");
-		this.logoutEvent.next(null);
+		this.logoutEvent.emit(null);
 	}
 }

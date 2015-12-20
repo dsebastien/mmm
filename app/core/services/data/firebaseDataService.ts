@@ -1,9 +1,9 @@
 "use strict";
 
-import { Injectable } from "angular2/angular2";
+import {Injectable} from "angular2/core";
 import * as Firebase from "firebase";
 
-import { Configuration } from "../../commons/configuration";
+import {Configuration} from "../../commons/configuration";
 import * as _ from "lodash";
 
 /**
