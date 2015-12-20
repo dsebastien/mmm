@@ -14,7 +14,7 @@ System.config({
     "firebase": "github:firebase/firebase-bower@2.3.2",
     "lodash": "npm:lodash@3.10.1",
     "normalize.css": "github:necolas/normalize.css@3.0.3",
-    "rxjs": "npm:@reactivex/rxjs@5.0.0-beta.0",
+    "rxjs": "npm:rxjs@5.0.0-beta.0",
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.3.0"
     },
@@ -80,11 +80,6 @@ System.config({
     },
     "github:necolas/normalize.css@3.0.3": {
       "css": "github:systemjs/plugin-css@0.1.20"
-    },
-    "npm:@reactivex/rxjs@5.0.0-beta.0": {
-      "buffer": "github:jspm/nodelibs-buffer@0.1.0",
-      "module": "github:jspm/nodelibs-module@0.1.0",
-      "process": "github:jspm/nodelibs-process@0.1.2"
     },
     "npm:amdefine@1.0.0": {
       "fs": "github:jspm/nodelibs-fs@0.1.2",
