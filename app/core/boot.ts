@@ -5,8 +5,9 @@ import {MyMediaManager} from "./app";
 
 // import Angular 2
 import {bootstrap} from "angular2/platform/browser";
-import {provide} from "angular2/core";
+import {provide, enableProdMode} from "angular2/core";
 import {HTTP_PROVIDERS} from "angular2/http";
+import {ELEMENT_PROBE_PROVIDERS} from 'angular2/platform/common_dom';
 
 // import Angular 2 Component Router
 // reference: http://blog.thoughtram.io/angular/2015/06/16/routing-in-angular-2.html
@@ -17,7 +18,7 @@ import {FirebaseDataService} from "./services/data/firebaseDataService";
 import {FirebaseAuthenticationService} from "./security/authentication/firebaseAuthenticationService";
 
 // enable production mode of Angular
-//enableProdMode();
+// enableProdMode(); // enable for production (also uncomment the import above!)
 
 // bootstrap our app
 console.log("Bootstrapping the App");
@@ -26,6 +27,7 @@ console.log("Bootstrapping the App");
 bootstrap(MyMediaManager, [
 	ROUTER_PROVIDERS,
 	HTTP_PROVIDERS,
+	ELEMENT_PROBE_PROVIDERS, // remove in production
 	provide(LocationStrategy, { useClass: PathLocationStrategy }), // enables the following: /#/<component_name> rather than /<component_name>
 	FirebaseDataService,
 	FirebaseAuthenticationService
