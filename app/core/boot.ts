@@ -28,7 +28,7 @@ bootstrap(MyMediaManager, [
 	ROUTER_PROVIDERS,
 	HTTP_PROVIDERS,
 	ELEMENT_PROBE_PROVIDERS, // remove in production
-	provide(LocationStrategy, { useClass: PathLocationStrategy }), // enables the following: /#/<component_name> rather than /<component_name>
+	provide(LocationStrategy, { useClass: PathLocationStrategy }), // can be switched to HashLocationStrategy if you cannot configure your server appropriately for URL rewriting
 	FirebaseDataService,
 	FirebaseAuthenticationService
 ]).then(
