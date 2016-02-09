@@ -35,6 +35,8 @@
   "exclude": [
 	"node_modules",
 	"jspm_packages",
-	"typings/src"
+	"typings/custom",
+	"typings/browser",
+	"typings/browser.d.ts"
   ]
 }
