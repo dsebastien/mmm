@@ -11,22 +11,22 @@ import * as _ from "lodash";
  */
 @Injectable()
 export class FirebaseDataService {
-	private _firebaseRef:Firebase;
+    private _firebaseRef:Firebase;
 
-	constructor() {
-		console.log("FirebaseDataService initialized");
-	}
+    constructor() {
+        console.log("FirebaseDataService initialized");
+    }
 
-	get firebaseConnection():Firebase {
-		if (_.isUndefined(this._firebaseRef)) {
-			this.connectToFirebase();
-		}
-		return this._firebaseRef;
-	}
+    get firebaseConnection():Firebase {
+        if (_.isUndefined(this._firebaseRef)) {
+            this.connectToFirebase();
+        }
+        return this._firebaseRef;
+    }
 
-	private connectToFirebase() {
-		console.log("Connecting to Firebase");
-		this._firebaseRef = new Firebase(Configuration.databaseURL);
-		console.log("Connected to Firebase");
-	}
+    private connectToFirebase() {
+        console.log("Connecting to Firebase");
+        this._firebaseRef = new Firebase(Configuration.databaseURL);
+        console.log("Connected to Firebase");
+    }
 }

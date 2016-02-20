@@ -20,33 +20,33 @@ import {FirebaseAuthenticationProviders} from "./security/authentication/firebas
 
 
 @Component({
-	selector: "my-media-manager",
-	templateUrl: "core/app.template.html", //template: "<router-outlet></router-outlet>",
-	directives: [RouterOutlet, RouterLink, NavBar, UserBar]
+    selector: "my-media-manager",
+    templateUrl: "core/app.template.html", //template: "<router-outlet></router-outlet>",
+    directives: [RouterOutlet, RouterLink, NavBar, UserBar]
 })
 @RouteConfig([
-	{path: "/", component: Home, as: "Home", data: undefined} // the as serves as alias for links, etc
-	//new Route({path: "/Home", component: Home, as: "Home", data: undefined}) // the as serves as alias for links, etc
+    {path: "/", component: Home, as: "Home", data: undefined} // the as serves as alias for links, etc
+    //new Route({path: "/Home", component: Home, as: "Home", data: undefined}) // the as serves as alias for links, etc
 ])
 export class MyMediaManager {
-	private _authenticationService:FirebaseAuthenticationService;
+    private _authenticationService:FirebaseAuthenticationService;
 
-	constructor(authenticationService:FirebaseAuthenticationService) {
-		console.log("MyMediaManager loaded");
-		this._authenticationService = authenticationService;
-	}
+    constructor(authenticationService:FirebaseAuthenticationService) {
+        console.log("MyMediaManager loaded");
+        this._authenticationService = authenticationService;
+    }
 
-	get authenticationService():FirebaseAuthenticationService {
-		return this._authenticationService;
-	}
+    get authenticationService():FirebaseAuthenticationService {
+        return this._authenticationService;
+    }
 
-	logonWithGoogle() {
-		console.log("Handling logon with Google event");
-		this._authenticationService.logonWith(FirebaseAuthenticationProviders.google);
-	}
+    logonWithGoogle() {
+        console.log("Handling logon with Google event");
+        this._authenticationService.logonWith(FirebaseAuthenticationProviders.google);
+    }
 
-	logout() {
-		console.log("Handling logout event");
-		this._authenticationService.logout();
-	}
+    logout() {
+        console.log("Handling logout event");
+        this._authenticationService.logout();
+    }
 }

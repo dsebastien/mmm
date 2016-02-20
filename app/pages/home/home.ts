@@ -4,12 +4,12 @@
 import {Component} from "angular2/core";
 
 @Component({
-	selector: "page-home",
-	templateUrl: "pages/home/home.template.html",
-	directives: []
+    selector: "page-home",
+    templateUrl: "pages/home/home.template.html",
+    directives: []
 })
 export class Home {
-	constructor() {
-		console.log("Home component loaded");
-	}
+    constructor() {
+        console.log("Home component loaded");
+    }
 }

@@ -4,11 +4,7 @@
 	"lineBreakAfterOpeningBraces": false,
 	"lineBreakBeforeClosingBraces": false
   },
-  "validateIndentation": {
-	"value": "\t",
-	"includeEmptyLines": false
-  },
-  "validateLineBreaks": "LF",
+  "validateIndentation": 4,
   "validateNewlineAfterArrayElements": {
 	"maximum": 2
   },
@@ -85,9 +81,9 @@
   ],
   "requireSpaceBetweenArguments": true,
   "disallowSpacesInAnonymousFunctionExpression": {
-	"beforeOpeningRoundBrace": true,
-	"beforeOpeningCurlyBrace": true
-  },
+  "beforeOpeningRoundBrace": true,
+  "beforeOpeningCurlyBrace": true
+},
   "disallowSpacesInCallExpression": true,
   "disallowSpacesInFunctionDeclaration": {
 	"beforeOpeningRoundBrace": true,

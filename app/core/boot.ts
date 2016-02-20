@@ -25,13 +25,13 @@ console.log("Bootstrapping the App");
 
 // in [] is the list of injector bindings. Those bindings are used when an injector is created. Passing these here make the bindings available application-wide
 bootstrap(MyMediaManager, [
-	ROUTER_PROVIDERS,
-	HTTP_PROVIDERS,
-	ELEMENT_PROBE_PROVIDERS, // remove in production
-	provide(LocationStrategy, { useClass: PathLocationStrategy }), // can be switched to HashLocationStrategy if you cannot configure your server appropriately for URL rewriting
-	FirebaseDataService,
-	FirebaseAuthenticationService
+    ROUTER_PROVIDERS,
+    HTTP_PROVIDERS,
+    ELEMENT_PROBE_PROVIDERS, // remove in production
+    provide(LocationStrategy, {useClass: PathLocationStrategy}), // can be switched to HashLocationStrategy if you cannot configure your server appropriately for URL rewriting
+    FirebaseDataService,
+    FirebaseAuthenticationService
 ]).then(
-	(success:any) => console.log("Bootstrap successful"),
-	(error:any) => console.error(error)
+    (success:any) => console.log("Bootstrap successful"),
+    (error:any) => console.error(error)
 );

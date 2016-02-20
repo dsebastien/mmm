@@ -1,8 +1,9 @@
 <h1>UserBar</h1>
 <nav>
-	<ul>
-		<li [class.u-hidden]="userIsAuthenticated"><a (click)="logonWithGoogle()">Login with Google</a></li>
-		<li [class.u-hidden]="!userIsAuthenticated">{{userInfo?.name}} <img class="userPic" src="{{userInfo?.picture}}"></li>
-		<li [class.u-hidden]="!userIsAuthenticated"><a (click)="logout()">Logout</a></li>
-	</ul>
+    <ul>
+        <li [class.u-hidden]="userIsAuthenticated"><a (click)="logonWithGoogle()">Login with Google</a></li>
+        <li [class.u-hidden]="!userIsAuthenticated">{{userInfo?.name}} <img class="userPic" src="{{userInfo?.picture}}">
+        </li>
+        <li [class.u-hidden]="!userIsAuthenticated"><a (click)="logout()">Logout</a></li>
+    </ul>
 </nav>
