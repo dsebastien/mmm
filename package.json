@@ -16,12 +16,12 @@
   "jspm": {
     "configFile": "jspm.conf.js",
     "dependencies": {
-      "angular2": "npm:angular2@2.0.0-beta.3",
+      "angular2": "npm:angular2@2.0.0-beta.7",
       "babel-runtime": "npm:babel-runtime@6.5.0",
-      "firebase": "github:firebase/firebase-bower@2.3.2",
-      "lodash": "npm:lodash@4.3.0",
+      "firebase": "github:firebase/firebase-bower@2.4.1",
+      "lodash": "npm:lodash@4.5.0",
       "normalize.css": "github:necolas/normalize.css@3.0.3",
-      "rxjs": "npm:rxjs@5.0.0-beta.0"
+      "rxjs": "npm:rxjs@5.0.0-beta.2"
     },
     "devDependencies": {
       "babel": "npm:babel-core@6.5.0",
@@ -30,12 +30,12 @@
   },
   "dependencies": {
     "babel-runtime": "6.5.x",
-    "rxjs": "5.0.0-beta.0",
-    "reflect-metadata": "0.1.2",
-    "zone.js": "0.5.13",
-    "es6-shim": "0.33.3",
-    "angular2": "2.0.0-beta.3",
-    "firebase": "2.3.x"
+    "rxjs": "5.0.0-beta.2",
+    "reflect-metadata": "0.1.x",
+    "zone.js": "0.5.x",
+    "es6-shim": "0.33.x",
+    "angular2": "2.0.0-beta.7",
+    "firebase": "2.4.x"
   },
   "devDependencies": {
     "babel-core": "6.5.x",
@@ -43,17 +43,16 @@
     "babel-preset-es2015": "6.5.x",
     "gulp": "3.9.x",
     "jspm": "0.16.x",
-    "nodemon": "1.8.x",
-    "typescript": "1.7.3",
+    "nodemon": "1.9.x",
+    "typescript": "1.8.x",
     "modern-web-dev-build": "0.5.x",
     "jasmine-core": "2.4.x",
     "karma-jasmine": "0.3.x",
-    "typings": "0.6.x",
-    "tsd": "0.6.x"
+    "typings": "0.x"
   },
   "engines": {
-    "node": ">=4.2.1",
-    "npm": ">=2.0.0"
+    "node": ">=4.2.6",
+    "npm": ">=3.7.2"
   },
   "scripts": {
     "tsc": "tsc",
