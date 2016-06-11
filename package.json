@@ -45,7 +45,7 @@
     "jspm": "0.16.x",
     "nodemon": "1.9.x",
     "typescript": "1.8.x",
-    "modern-web-dev-build": "0.5.x",
+    "modern-web-dev-build": "0.5.4",
     "jasmine-core": "2.4.x",
     "karma-jasmine": "1.0.2",
     "typings": "0.x"
