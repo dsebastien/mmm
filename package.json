@@ -32,7 +32,7 @@
     "babel-runtime": "6.5.x",
     "rxjs": "5.0.0-beta.2",
     "reflect-metadata": "0.1.x",
-    "zone.js": "0.5.x",
+    "zone.js": "0.8.7",
     "es6-shim": "0.35.1",
     "angular2": "2.0.0-beta.7",
     "firebase": "2.4.x"
